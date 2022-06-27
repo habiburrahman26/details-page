@@ -13,7 +13,7 @@ const Details = () => {
   }, []);
 
   return (
-    <div className="w-[1000px] mx-auto bg-gray-50 p-4 mt-5">
+    <div className="w-[320px] md:w-[800px] lg:w-[1000px] mx-auto bg-gray-50 p-4 mt-10">
       <div className="pb-10">
         <h3 className="font-bold text-3xl">
           Summer Art Camp! 5 Days of Artists and Painting Monet, Van Gogh,
@@ -75,7 +75,7 @@ const Details = () => {
             <small>5 reviews for this class</small>
           </div>
           <p className="font-semibold mt-2 mb-5">Completed by 21 learners</p>
-          <div className='flex items-center gap-4 pt-3'>
+          <div className="flex items-center gap-4 pt-3">
             <button className="flex items-center gap-1 px-6 py-2 text-white text-sm bg-blue-600 rounded-full font-semibold">
               <span>See Class Schedule</span>
               <svg
@@ -129,10 +129,10 @@ const Details = () => {
             </button>
           </div>
         </div>
-        <div>
-          {images.map((image) => (
-            <img key={image.id} src={image.img} alt="img" />
-          ))}
+        <div className="grid gap-2 grid-rows-2 grid-cols-2">
+          <img src={images[0]?.img} alt="" className='row-span-2 h-full'/>
+          <img src={images[1]?.img} alt="" className='h-full' />
+          <img src={images[2]?.img} alt="" className='h-full' />
         </div>
       </div>
     </div>
